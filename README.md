@@ -1,4 +1,5 @@
 # example-sub
+[![dependencies](https://david-dm.org/doug-wade/example-sub.svg)](https://david-dm.org/doug-wade/example-sub)
 
 example-sub is a cli application that uses subcommands to organize functionality into an easily-readable, fluent argument style.
 
