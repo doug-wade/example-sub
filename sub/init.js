@@ -4,10 +4,9 @@ var config = require('../lib/config');
 var inquirer = require('inquirer');
 
 /**
- * Set up configuration for example-sub
+ * Set up configuration for example-sub. Runs interactive commands to walk you through setting up config.
  * Usage:
- *     sub init
- *     # Interactive commands walk you through setting config
+ *     example-sub init
  */
 module.exports = function (callback) {
   inquirer.prompt([

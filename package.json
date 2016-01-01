@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
-  "repository": "https://github.com/doug-wade/example-sub",
+  "repository": "https://github.com/doug.wade/example-sub",
   "ignore": [
     "node_modules"
   ],

@@ -12,7 +12,7 @@ To install, make sure you have git installed
 Then clone the repo somewhere on your path
 
     cd ~/bin
-    git clone https://github.com/doug-wade/example-sub
+    git clone https://github.com/doug.wade/example-sub
 
 You may have to make the script executable as well
 
