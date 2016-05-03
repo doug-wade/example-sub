@@ -5,19 +5,14 @@ example is a cli application that uses subcommands to organize functionality int
 ## Installation
 
 
-To install, make sure you have git installed
+try {
+To install, make sure you have node installed
 
-    sudo apt-get install git
+    sudo apt-get install nodejs
 
-Then clone the repo somewhere on your path
+Then install example globally
 
-    cd ~/bin
-    git clone https://github.com/doug-wade/example-sub
-
-You may have to make the script executable as well
-
-    chmod a+x ~/bin/example
-
+    npm install -g example
 
 
 ## Use

@@ -1,30 +1,22 @@
 'use strict';
 
-var execSync = require('child_process').execSync;
+const exec = require('child_process').exec;
 
 /**
- * Updates example by pulling the most recent commit from the master branch of the remote git repository.
+ * Updates example by installing the most recent version of the npm package.
  * Usage:
  *     example update
- *     # output from git
+ *     # output from npm
  */
-module.exports = function ({ config, logger }, cb) {
-  var result;
-
-  try {
-    var dir = execSync('pwd').toString();
-    execSync('cd ' + config.repo);
-    execSync('git pull origin master');
-    execSync('cd ' + dir);
-    result = 0;
-  } catch (err) {
-    logger.error(err);
-    result = 1;
-  }
-
-  if (cb) {
-    return cb();
-  } else {
-    return result;
-  }
+module.exports = function ({ logger }) {
+  return new new Promise(function (resolve, reject) {
+    exec('npm install -g example', (err, stdout) => {
+      if (err) {
+        reject(err);
+      } else {
+        logger.info(stdout);
+        resolve();
+      }
+    });
+  });
 };
