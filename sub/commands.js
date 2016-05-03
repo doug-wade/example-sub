@@ -1,19 +1,21 @@
 'use strict';
 
-var registry = require('../lib/registry');
-
 /**
  * Lists all commands.
  * Usage:
- *      example-sub commands
+ *      example commands
  *          commands
  *          example
  *          help
  *          init
  *          update
  */
-module.exports = () => {
-  var commands = registry.getAll();
-
-  commands.forEach((sub) => console.log('    ' + sub));
+module.exports = ({ logger, sub }) => {
+  return new Promise((resolve, reject) => {
+    sub.get().then((commands) => {
+      logger.info('Available commands: ');
+      commands.forEach((s) => logger.random(s));
+      resolve();
+    }, reject);
+  });
 };
