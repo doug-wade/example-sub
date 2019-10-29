@@ -22,7 +22,7 @@
   "devDependencies": {
     "ava": "^0.14.0",
     "nyc": "^6.0.0",
-    "eslint": "^2.4.0",
+    "eslint": "^6.6.0",
     "snyk": "^1.14.1",
     "sinon": "^1.17.3"
   },
